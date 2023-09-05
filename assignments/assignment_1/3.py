@@ -6,6 +6,13 @@ df = pd.read_csv('AirPassengers.csv')
 
 
 def acf(dt, tc, lag):
+    """
+    Method to calculate auto-correlation coefficient of given lag
+    :param dt: pd.DataFrame - dataset
+    :param tc: string - target column
+    :param lag: int - lag
+    :return: int - auto-correlation coefficient
+    """
     n = len(dt)
     d1 = dt[tc]
     mean_data = np.mean(dt[tc])
@@ -16,6 +23,13 @@ def acf(dt, tc, lag):
 
 
 def acf_plot(data, target_column, lags):
+    """
+    Method to plot auto-correlation function
+    :param data: pd.DataFrame - dataset
+    :param target_column: string - target column
+    :param lags: int - number of lags
+    :return: list - auto-correlation coefficients for given number of lags and plots the acf plot
+    """
     acf_values = []
     for i in range(0, lags + 1):
         acf_values.append(acf(data, target_column, i))

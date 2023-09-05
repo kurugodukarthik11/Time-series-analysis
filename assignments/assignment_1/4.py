@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 
 data = [2.7, 7.8, 6.2, 10.7, 9.6, 14.0, 13.2, 16.1, 17.9, 22.2, 23.7, 24.6, 24.6, 28.7, 28.6, 34.5, 34.1, 39.0,
@@ -12,7 +11,18 @@ b_1 = np.matrix([np.cos(np.pi * t) for t in range(1, len(data) + 1)]).reshape(le
 c_1 = np.matrix([np.sin(np.pi * t) for t in range(1, len(data) + 1)]).reshape(len(data), 1)
 X = np.hstack([a_0, a_1, b_1, c_1])
 beta = (X.T * X).I * X.T * y
-print(beta)
+print(f"a_0: {beta[0, 0]}")
+print(f"a_1: {beta[1, 0]}")
+print(f"b_1: {beta[2, 0]}")
+print(f"c_1: {beta[3, 0]}")
+plt.figure(figsize=(10, 6))
+plt.plot(range(1, len(data) + 1), data, color='black', label="Actual Data")
+plt.plot(range(1, len(data) + 1), X * beta, color='red', label="Predicted Values")
+plt.xlabel("t")
+plt.ylabel("X_t")
+plt.title("Actual vs Predicted Values")
+plt.legend()
+plt.show()
 
 # # import numpy as np
 # # import matplotlib.pyplot as plt
