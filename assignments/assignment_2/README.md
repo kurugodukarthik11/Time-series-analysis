@@ -1,9 +1,12 @@
+**_Instructions:_** _Download the notebook and libraries mentioned in the notebook to interact with the plotly dashboards in the notebook._
 ## Find time series data on the internet and do an interesting analysis of the data using methods discussed in class. This includes estimating trend and seasonal components, removing these components from the data, checking if the adjusted data has become free of such systematic components, and so on. We mainly focus on non-parametric approaches, for example, moving average filters.
 
 **Dataset considered for this assignment:** [all_fuels_data.csv](https://www.kaggle.com/datasets/guillemservera/fuels-futures-data/?select=all_fuels_data.csv)
 
 **About Dataset**:
-This dataset provides comprehensive and up-to-date information on futures related to oil, gas, and other fuels. Futures are financial contracts obligating the buyer to purchase and the seller to sell a specified amount of a particular fuel at a predetermined price and future date.
+This dataset provides comprehensive and up-to-date information on futures related to oil, gas, and other fuels. Futures
+are financial contracts obligating the buyer to purchase and the seller to sell a specified amount of a particular fuel
+at a predetermined price and future date.
 
 **Column Description:**
 - **Date:** The date when the data was documented. Format: YYYY-MM-DD.
