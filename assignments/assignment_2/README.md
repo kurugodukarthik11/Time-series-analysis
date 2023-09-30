@@ -1,0 +1,1 @@
+Find time series data on the internet and do an interesting analysis of the data using methods discussed in class. This includes estimating trend and seasonal components, removing these components from the data, checking if the adjusted data has become free of such systematic components, and so on. We mainly focus on non-parametric approaches, for example, moving average filters.
